@@ -16,7 +16,12 @@ void agregarPuerta(List<Puerta> *lisPuertas, int pId, int pIdPuerta){
             if(probabilidad<=0.66){
                cout<<"Va con puerta"<<endl;
                lisPuertas->find(i)->agregarPuerta(pIdPuerta);
-
+               for (int j = 0; j < 4; j++){
+                  if(lisPuertas->find(i)->listaPuertas()->find(j)->getId()==pIdPuerta){
+                     lisPuertas->find(i)->listaPuertas()->find(j)->agregarPuerta(pId);
+                     break;
+                  }
+               }
             }else{
                cout<<"No va con puerta"<<endl;
             }

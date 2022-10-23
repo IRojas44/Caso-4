@@ -22,8 +22,8 @@ public:
         entradas++;
     }
 
-    void usarEntrada(){
-        entradas+1;
+    List<Puerta>* listaPuertas(){
+        return puertasAsociadas;
     }
 
     int getEntradas(){
